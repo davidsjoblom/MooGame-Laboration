@@ -5,14 +5,22 @@ namespace MooGame.Core
 {
    public class Game
    {
+      public IUserInputHandler _userInputHandler { get; }
+      public IGameOutputHandler _gameOutputHandler { get; }
+      public Game(IUserInputHandler userInputHandler, IGameOutputHandler gameOutputHandler)
+      {
+         _gameOutputHandler = gameOutputHandler;
+         _userInputHandler = userInputHandler;
+      }
+
       public void Run()
       {
-         Console.WriteLine("Enter your user name:");
-         var name = Console.ReadLine();
+         _gameOutputHandler.AskForUserName();
+         var name = _userInputHandler.GetUsername();
 
          while (true)
          {
-            Console.WriteLine("New game:");
+            _gameOutputHandler.DisplayInitialMessage();
             var goal = generateGoal();
             System.Console.WriteLine("Dev mode, goal generated: " + goal); //FIXME temp dev line
 

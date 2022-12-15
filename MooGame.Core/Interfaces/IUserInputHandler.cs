@@ -1,9 +1,8 @@
-namespace MooGame.Core
+namespace MooGame.Core;
+
+public interface IUserInputHandler
 {
-    public interface IUserInputHandler
-    {
-        public string GetUsername();
-        public string GetUserGuess();
-        public bool GetPlayAgainAnswer();
-    }
+   public string GetUsername();
+   public string GetUserGuess();
+   public bool GetPlayAgainAnswer();
 }
