@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace MooGame.Core
 {
-   class Game
+   public class Game
    {
       public void Run()
       {
-         Console.WriteLine("Enter your user name:\n");
+         Console.WriteLine("Enter your user name:");
          var name = Console.ReadLine();
 
          while (true)
          {
-            Console.WriteLine("New game:\n");
+            Console.WriteLine("New game:");
             var goal = generateGoal();
             System.Console.WriteLine("Dev mode, goal generated: " + goal); //FIXME temp dev line
 
@@ -21,7 +21,7 @@ namespace MooGame.Core
             do
             {
                var guess = Console.ReadLine();
-               Console.WriteLine((guess ?? "null") + "\n");
+               Console.WriteLine(guess ?? "null");
                numberOfGuesses++;
                var goalCheckResult = checkGuess(goal, guess);
                Console.WriteLine(goalCheckResult + "\n");
