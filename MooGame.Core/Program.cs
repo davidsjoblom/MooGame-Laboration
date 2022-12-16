@@ -22,6 +22,7 @@ public class Program
       var services = new ServiceCollection();
       services.AddSingleton<IUserInputHandler, UserInputHandler>();
       services.AddSingleton<IGameOutputHandler, GameOutputHandler>();
+      services.AddSingleton<IGameLogicHandler, GameLogicHandler>();
       services.AddSingleton<Game>();
       return services;
    }
