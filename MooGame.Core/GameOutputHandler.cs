@@ -4,7 +4,7 @@ public class GameOutputHandler : IGameOutputHandler
 {
    public void AskForUserName()
    {
-      System.Console.WriteLine("Enter your username: ");
+      System.Console.WriteLine("Enter your username:");
    }
 
    public void DisplayInitialMessage()
@@ -25,5 +25,10 @@ public class GameOutputHandler : IGameOutputHandler
    public void AskToPlayAgain()
    {
       System.Console.WriteLine("Continue?");
+   }
+
+   public void DisplayTopList(string topList)
+   {
+      System.Console.WriteLine(topList);
    }
 }

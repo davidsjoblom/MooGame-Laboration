@@ -7,4 +7,5 @@ public interface IGameOutputHandler
    public void DisplayGuessEvaluationResult(string guessEvaluationResult);
    public void DisplayWinMessageWithGuessCount(int guesses);
    public void AskToPlayAgain();
+   public void DisplayTopList(string topList);
 }

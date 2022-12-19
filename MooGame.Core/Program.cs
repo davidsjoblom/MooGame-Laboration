@@ -23,6 +23,7 @@ public class Program
       services.AddSingleton<IUserInputHandler, UserInputHandler>();
       services.AddSingleton<IGameOutputHandler, GameOutputHandler>();
       services.AddSingleton<IGameLogicHandler, GameLogicHandler>();
+      services.AddSingleton<IScoreListHandler, ScoreListHandler>();
       services.AddSingleton<Game>();
       return services;
    }
