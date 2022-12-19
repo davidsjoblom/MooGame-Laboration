@@ -10,11 +10,7 @@ public class Program
    {
       var services = ConfigureServices();
       var serviceProvider = services.BuildServiceProvider();
-      serviceProvider?.GetService<Game>()?.Run();
-
-      // Console.WriteLine("Welcome to MooGame!");
-      // var game = new Game();
-      // game.Run();
+      serviceProvider.GetService<Game>()!.Run();
    }
 
    private static IServiceCollection ConfigureServices()
